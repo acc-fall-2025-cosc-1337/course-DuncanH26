@@ -15,6 +15,9 @@ class TicTacToe{
     std::string get_player() const {return player;}
     void display_board() const;
     std::string get_winner() const;
+    friend std::ostream& operator<<(std::ostream& out, const TicTacToe& b);
+    friend std::istream& operator>>(std::istream& in, TicTacToe& b);
+    std::string get_winner() const {return winner;}
 
     private:
     std::string player;
@@ -27,6 +30,7 @@ class TicTacToe{
     bool check_row_win();
     bool check_diagonal_win();
     void set_winner();
+    std::string winner;
 
 
 

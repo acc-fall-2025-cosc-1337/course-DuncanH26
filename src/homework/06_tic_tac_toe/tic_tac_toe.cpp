@@ -137,5 +137,11 @@ void TicTacToe::set_next_player(){
 }
 
 
-    
+std::ostream& operator<<(std::ostream& out, const TicTacToe& b){
+
+    for(size_t i = 0; i < b.pegs.size(); i += 3){
+
+        out << b.pegs[i] << "" << b.pegs[i + 1] << "" <<b.pegs[i + 2] << "\n"
+    }
+}
            
